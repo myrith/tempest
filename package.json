@@ -19,5 +19,9 @@
     "markdown"
   ],
   "author": "Jerven Clark Chua <jervenclark@gmail.com> (http://jervenclarkchua.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0"
+  }
 }
