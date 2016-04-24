@@ -1,0 +1,23 @@
+{
+  "name": "tempest",
+  "version": "0.0.0",
+  "description": "single page no database nodejs blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://jervenclark@github.com/jervenclark/tempest/"
+  },
+  "keywords": [
+    "nodejs",
+    "single",
+    "page",
+    "blog",
+    "angular",
+    "markdown"
+  ],
+  "author": "Jerven Clark Chua <jervenclark@gmail.com> (http://jervenclarkchua.com)",
+  "license": "ISC"
+}
