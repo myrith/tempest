@@ -23,5 +23,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-mocha": "^2.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "markdown-to-html": "0.0.11"
   }
 }
