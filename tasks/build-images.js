@@ -9,6 +9,7 @@ module.exports = function(gulp, config, plugins) {
         interlaced: true
       }))
       .pipe(gulp.dest('dist/assets/img'))
+      .pipe(plugins.livereload())
       .pipe(plugins.notify({
         message: 'Images task complete'
       }));

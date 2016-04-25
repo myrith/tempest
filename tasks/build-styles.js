@@ -10,6 +10,7 @@ module.exports = function(gulp, config, plugins) {
       }))
       .pipe(plugins.cssnano())
       .pipe(gulp.dest('dist/assets/css'))
+      .pipe(plugins.livereload())
       .pipe(plugins.notify({
         message: 'Styles task complete'
       }));

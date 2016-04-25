@@ -5,7 +5,8 @@ module.exports = function(gulp, config, plugins) {
     deps: [
       'watch:images',
       'watch:scripts',
-      'watch:styles'
+      'watch:styles',
+      'watch:views',
     ],
     params: [],
     fn: function() {}
