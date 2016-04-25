@@ -4,6 +4,7 @@
   "description": "single page no database nodejs blog",
   "main": "index.js",
   "scripts": {
+    "setup": "npm install && bower install",
     "test": "gulp test",
     "start": "node ."
   },
