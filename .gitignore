@@ -34,3 +34,6 @@ node_modules
 
 # Bower components
 bower_components
+
+# Generated folders
+dist
