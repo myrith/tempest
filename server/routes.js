@@ -1,6 +1,7 @@
 'use strict';
 
-const express = require('express');
+const express = require('express'),
+  fs = require('fs');
 
 module.exports = function(app) {
   let route = express.Router();
@@ -12,16 +13,17 @@ module.exports = function(app) {
     .get('/api/posts/:title', single);
 
   route
-    .get('/*', express.static('public'));
+    .get('/*', express.static('dist'));
 
   app.use(route);
 
 }
 
 function all(req, res) {
-  res.json([])
+  let posts = fs.readdirSync('static');
+  res.json(posts);
 }
 
 function single(req, res) {
-  res.json({})
+  res.json({});
 }
