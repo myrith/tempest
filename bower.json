@@ -1,0 +1,29 @@
+{
+  "name": "tempest",
+  "description": "single page no database nodejs blog",
+  "main": "index.js",
+  "authors": [
+    "Jerven Clark Chua <jervenclark@gmail.com> (http://jervenclarkchua.com)"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "nodejs",
+    "single",
+    "page",
+    "blog",
+    "angular",
+    "markdown"
+  ],
+  "homepage": "https://github.com/jervenclark/tempest",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5"
+  }
+}
