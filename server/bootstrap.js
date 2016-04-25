@@ -1,14 +1,11 @@
 'use strict';
 
 const config = require('./config'),
-  express = require('express');
+  routes = require('./routes');
 
 module.exports = function bootstrap(app) {
 
-  app.use('/*', function (req, res) {
-    console.log('this');
-    return express.static('client/display');
-  });
+  routes(app);
 
   return {
     start: function start() {
