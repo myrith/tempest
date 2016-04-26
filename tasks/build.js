@@ -5,7 +5,8 @@ module.exports = function(gulp, config, plugins) {
     deps: [
       'build:images',
       'build:scripts',
-      'build:styles'
+      'build:styles',
+      'build:views'
     ],
     params: [],
     fn: function() {}
