@@ -4,9 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Tempest</title>
+  <script src="/vendors/angular/angular.min.js"></script>
+  <script src="/vendors/angular-marked/dist/angular-marked.min.js"></script>
+  <script src="/vendors/marked/marked.min.js"></script>
+  <script src="/assets/js/main.min.js"></script>
 </head>
 
-<body>
+<body ng-app="tempest" ng-controller="HomeController as home" ng-cloak>
+  <h1>Tempest Blogs</h1>
+  <div ng-repeat="post in home.posts">
+    <h1>{{post.title}}</h1>
+    <p>{{post.date}}</p>
+  </div>
 </body>
 
 </html>
