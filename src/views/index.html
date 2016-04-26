@@ -3,19 +3,22 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tempest</title>
+  <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.min.css">
   <script src="/vendors/angular/angular.min.js"></script>
+  <script src="/vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="/vendors/angular-marked/dist/angular-marked.min.js"></script>
   <script src="/vendors/marked/marked.min.js"></script>
   <script src="/assets/js/main.min.js"></script>
+  <script src="/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
-<body ng-app="tempest" ng-controller="HomeController as home" ng-cloak>
-  <h1>Tempest Blogs</h1>
-  <div ng-repeat="post in home.posts">
-    <h1>{{post.title}}</h1>
-    <p>{{post.date}}</p>
-  </div>
+<body ng-app="tempest" ng-cloak>
+  <ui-view></ui-view>
 </body>
 
 </html>

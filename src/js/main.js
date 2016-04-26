@@ -4,7 +4,8 @@
 
   angular
     .module('tempest', [
-      'hc.marked'
+      'hc.marked',
+      'ui.router'
     ]);
 
 })();
