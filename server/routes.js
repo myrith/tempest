@@ -1,6 +1,7 @@
 'use strict';
 
 const express = require('express'),
+  moment = require('moment'),
   fs = require('fs');
 
 module.exports = function(app) {
@@ -8,10 +9,15 @@ module.exports = function(app) {
 
   route
     .get('/api/posts', (req, res) => {
-      let posts = fs.readdirSync('static').map((post) => {
+      let posts = fs.readdirSync('static/posts').map((post) => {
+
         return {
-          date: post.slice(0, 10),
-          title: post.slice(11, post.length - 3).split('-').join(' ')
+          title: post,
+          content: fs
+            .readFileSync(`static/posts/${post}`, 'utf-8')
+            .split(' ')
+            .slice(0, 50)
+            .join(' ')
         };
       });
       res.json(posts);
@@ -20,7 +26,10 @@ module.exports = function(app) {
   route
     .get('/api/posts/:title', (req, res) => {
       if (req.params.title) {
-        let post = fs.readFileSync(`static/${req.params.title}.md`, 'utf-8');
+        let post = fs
+          .readFileSync(`static/posts/${req.params.title}.md`, 'utf-8')
+          .split('\n')
+          .slice(0, 5);
         res.json(post)
       } else {
         res.status(404).json({
