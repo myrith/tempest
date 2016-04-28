@@ -6,7 +6,8 @@
   "scripts": {
     "setup": "npm install && bower install",
     "test": "gulp test",
-    "start": "node ."
+    "prestart": "gulp build ",
+    "start": "gulp start:dev"
   },
   "repository": {
     "type": "git",
