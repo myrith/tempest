@@ -1,3 +1,133 @@
-.page-container{
-  margin-top:80px;
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-container {
+  margin-top: 80px;
+}
+
+.navbar-default {
+  background-color: #fff;
+  border: none;
+  border-top: 5px solid #3EB4F2;
+  padding: 30px;
+}
+
+.header,
+.marketing,
+.footer {
+  margin-top: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.navbar-brand strong {
+  color: #000;
+}
+
+.navbar-brand span {
+  font-weight: bold;
+  color: #3EB4F2;
+  margin-left: 2px;
+}
+
+blockquote {
+  border-left: 5px solid #3EB4F2;
+}
+
+.nav {
+  font-size: 18px;
+  padding: 15px;
+}
+
+.nav span {
+  color: #3EB4F2;
+}
+
+.home-quote {
+  margin: 30px 0px 75px;
+}
+
+.posts-list .post-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.posts-list .post-content {
+  margin: 10px 0 20px;
+}
+
+.posts-list .post-day {
+  text-transform: uppercase;
+  font-size: 80px;
+  margin-bottom: 0px;
+}
+
+a {
+  color: #3EB4F2;
+}
+
+a:hover, a:active {
+  text-decoration: none;
 }

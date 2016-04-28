@@ -5,12 +5,26 @@
 </div>
  -->
 <div ng-repeat="post in posts.list" class="posts-list">
-  <h2 class="post-title">
-    <a href="#">{{post.title}}</a>
-  </h2>
-  <p marked="post.content" class="post-content"></p>
-  <p>
-    <button class="btn btn-default">Read more</button>
-  </p>
-  <hr ng-if="!$last">
+  <div class="row">
+    <div class="col-xs-2 text-center">
+      <h5 class="post-day">
+        {{post.date | date : 'd'}}
+      </h5>
+      <p class="post-year">
+        {{post.date | date: 'MMMM yyyy'}}
+      </p>
+    </div>
+    <div class="col-xs-10">
+      <h2 class="post-title">
+      <a href="#">{{post.title}}</a>
+    </h2>
+      <p marked="post.content" class="post-content"></p>
+      <p>
+        <button class="btn btn-default">Read more</button>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <hr ng-if="!$last">
+  </div>
 </div>
