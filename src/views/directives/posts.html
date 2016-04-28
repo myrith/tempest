@@ -1,0 +1,16 @@
+<!-- <div marked="home.content"></div> -->
+<!-- <div ng-repeat="post in home.posts" style="margin:30px 0">
+  <a ui-sref="state.post"><h1 style="text-transform: uppercase;">{{post.title}}</h1></a>
+  <div>{{post.date}}</div>
+</div>
+ -->
+<div ng-repeat="post in posts.list" class="posts-list">
+  <h2 class="post-title">
+    <a href="#">{{post.title}}</a>
+  </h2>
+  <p marked="post.content" class="post-content"></p>
+  <p>
+    <button class="btn btn-default">Read more</button>
+  </p>
+  <hr ng-if="!$last">
+</div>
