@@ -7,7 +7,7 @@ const argv = require('minimist')(process.argv.slice(2)),
 module.exports = function(gulp, config, plugins) {
   return function() {
     if (argv.name) {
-      let file = `static/${moment().format('YYYY-MM-DD-HH-mm')}-${argv.name}.md`;
+      let file = `static/posts/${moment().format('YYYY-MM-DD-HH-mm')}-${argv.name}.md`;
       fs.writeFileSync(file, '')
     } else {
       console.log('Post name is required.');
