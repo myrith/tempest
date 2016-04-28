@@ -14,7 +14,8 @@
 
     var vm = this;
 
-    vm.title = "Tempest";
+    vm.title = "tempest";
+    vm.description = "blog"
 
     return vm;
 
