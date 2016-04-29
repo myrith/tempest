@@ -8,15 +8,18 @@
 
   Configuration.$inject = [
     '$stateProvider',
-    '$urlRouterProvider'
+    '$urlRouterProvider',
+    '$locationProvider'
   ];
 
   function Configuration(
     $stateProvider,
-    $urlRouterProvider
+    $urlRouterProvider,
+    $locationProvider
   ) {
 
-    $urlRouterProvider.otherwise("/");
+
+    $locationProvider.html5Mode(true)
 
     $stateProvider
       .state('base', {
@@ -29,7 +32,13 @@
         url: "/",
         templateUrl: "/partials/home.html",
         controller: 'HomeController as home'
+      })
+      .state('base.error', {
+        url: "/404",
+        templateUrl: "/partials/404.html"
       });
+
+    $urlRouterProvider.otherwise("/404");
 
   }
 

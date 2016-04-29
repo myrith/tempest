@@ -43,4 +43,8 @@ module.exports = function(app) {
 
   app.use(route);
 
+  app.use(function(req, res) {
+    res.sendfile('dist/index.html');
+  });
+
 };
