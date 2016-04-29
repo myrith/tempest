@@ -23,12 +23,14 @@
       vm.list = [];
 
       res.data.forEach(function (post) {
-        var dateTime = post.title.split('-').slice(0, 5);
+        var dateTime = post.title.split('-').slice(0, 5),
+          link = post.title.slice(17, post.title.length - 3);
         vm.list.push({
-          title: post.title.slice(17, post.title.length - 3).split('-').join(' '),
+          title: link.split('-').join(' '),
           date: dateTime.slice(0,3).join('-'),
           time: dateTime.slice(3,5).join(':'),
-          content: post.content
+          content: post.content,
+          link: link
         })
       });
 

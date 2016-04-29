@@ -34,11 +34,21 @@
         controller: 'HomeController as home'
       })
       .state('base.error', {
-        url: "/404",
+        url: "/errors/404",
         templateUrl: "/partials/404.html"
+      })
+      .state('base.post', {
+        url: "/posts/:id",
+        templateUrl: "/partials/post.html",
+        controller: 'PostController as post'
+      })
+      .state('base.page', {
+        url: "/pages/:id",
+        templateUrl: "/partials/page.html",
+        controller: 'PageController as page'
       });
 
-    $urlRouterProvider.otherwise("/404");
+    $urlRouterProvider.otherwise("/errors/404");
 
   }
 
