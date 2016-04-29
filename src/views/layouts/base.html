@@ -1,11 +1,11 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><strong>{{base.title}}</strong><span>{{base.subtitle}}</span></a>
+      <a class="navbar-brand" href="/"><strong>{{base.title}}</strong><span>{{base.subtitle}}</span></a>
     </div>
     <div id="navbar" class="navbar-caollapse caollapse">
       <ul class="nav navbar-nav navbar-right">
-        <li>writing by <span><a href="/pages/about">{{base.author}}</a></span></li>
+        <li>writing by <span><a href="/404">{{base.author}}</a></span></li>
       </ul>
     </div>
   </div>
@@ -13,6 +13,6 @@
 <div class="container page-container">
   <ui-view></ui-view>
   <footer class="footer">
-    <p>Copyright &copy; 2015 Jerven Clark Chua. All Rights Reserved.</p>
+    <p>Copyright &copy; {{ base.date | date: 'yyyy'}} {{base.company}}. All Rights Reserved.</p>
   </footer>
 </div>

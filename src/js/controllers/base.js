@@ -18,9 +18,11 @@
 
     [
       'title',
-      'description',
+      'subtitle',
       'author',
-      'description'
+      'description',
+      'company',
+      'date'
     ].forEach(function(field) {
       vm[field] = APP[field];
     });
