@@ -30,7 +30,8 @@
           date: dateTime.slice(0,3).join('-'),
           time: dateTime.slice(3,5).join(':'),
           content: post.content,
-          link: link
+          link: link,
+          fullTitle: post.title.slice(0, post.title.length - 3)
         })
       });
 

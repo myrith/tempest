@@ -28,9 +28,20 @@ module.exports = function(app) {
       if (req.params.title) {
         let post = fs
           .readFileSync(`static/posts/${req.params.title}.md`, 'utf-8')
-          .split('\n')
-          .slice(0, 5);
         res.json(post)
+      } else {
+        res.status(404).json({
+          message: 'Not found'
+        });
+      }
+    });
+
+  route
+    .get('/api/pages/:title', (req, res) => {
+      if (req.params.title) {
+        let page = fs
+          .readFileSync(`static/pages/${req.params.title}.md`, 'utf-8');
+        res.json(page)
       } else {
         res.status(404).json({
           message: 'Not found'
